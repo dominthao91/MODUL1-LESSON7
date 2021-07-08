@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table style="background-color: aqua">
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td><input type="number" id="nhapvao" value=""></td>
+        <td><select name="name" id="vnd">
+            <option value="23000">VND</option>
+            <option value="1">USD</option>
+        </select>
+        </td> <td><select name="name" id="usd">
+            <option value="23000">VND</option>
+            <option value="1">USD</option>
+        </select>
+        </td>
+        <td style="background-color: burlywood"><input type="button" value="Convert" onclick="covert()"></td>
+    </tr>
+
+    <script>
+        function covert() {
+            let a = +document.getElementById('nhapvao').value;
+            console.log('a=',a);
+            let b = +document.getElementById('vnd').value;
+            console.log('b=',b);
+            let c = +document.getElementById('usd').value;
+            console.log('c=',c);
+            let mony = a * (c/b);
+            document.getElementById('in').innerHTML ='số tiền là :' +mony;
+        }
+    </script>
+</table>
+<p id="in"></p>
+</body>
+</html>
